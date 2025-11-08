@@ -1,7 +1,5 @@
 #  TeoTeca
 
-> **Conhecimento que Edifica**
-
 <p align="center">
   <img src="./img/Logo - FundoTrans.png" alt="Logo TeoTeca" width="350"/>
 </p>
