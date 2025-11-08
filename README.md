@@ -3,7 +3,7 @@
 > **Conhecimento que Edifica**
 
 <p align="center">
-  <img src="./img/Logo-TeoTeca.png" alt="Logo TeoTeca" width="350"/>
+  <img src="./img/Logo - FundoTrans.png.png" alt="Logo TeoTeca" width="350"/>
 </p>
 ---
 
