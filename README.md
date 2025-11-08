@@ -27,7 +27,6 @@ O objetivo é criar um espaço acessível e confiável que contenha informaçõe
 ## Status do Projeto
 
 📘 Projeto em desenvolvimento como parte da disciplina de **Pesquisa e Inovação** da **São Paulo Tech School - SPTech**.  
-O site será hospedado em um servidor dedicado assim que as etapas principais forem concluídas.
 
 
 ---
