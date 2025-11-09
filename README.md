@@ -1,7 +1,7 @@
 #  TeoTeca
 
 <p align="center">
-  <img src="./img/Logo - FundoTrans.png" alt="Logo TeoTeca" width="350"/>
+  <img src="./src/img/Logo - FundoTrans.png" alt="Logo TeoTeca" width="350"/>
 </p>
 ---
 
@@ -41,6 +41,6 @@ O objetivo é criar um espaço acessível e confiável que contenha informaçõe
 ## Autor
 
 **Luan Iada**  
-Criador e pesquisador responsável pelo projeto TeoTeca.
+Criador responsável pelo projeto TeoTeca.
 > “Toda a Escritura é inspirada por Deus e útil para o ensino, para a repreensão, para a correção e para a instrução na justiça,
 para que o homem de Deus seja apto e plenamente preparado para toda boa obra.” – 2 Timóteo 3:16-17
