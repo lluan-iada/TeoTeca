@@ -71,22 +71,57 @@ main > div > div{
   border: 1px solid red;
 } */
 
-img {
+/* img {
   width: 35px;
   height: 35px;
   border-radius: 9px;
-}
+} */
 
 
 header {
-  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0rem;
   border-bottom: 2px solid #fee993;
+
 }
 
+.titulo {
+  width:60px;
+  height: 60px;
+}
 
-.titulo{
+header h2{
+  justify-content: space-between;
+  color: #e17100;
+  font-size: 15px;
+}
+
+nav {
+  display:flex;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+li{
+  text-decoration: none;
+
+}
+
+/* .titulo{
   width:50px;
   height: 50px;
+  display: flex;
+  justify-content: fle;
+}
+
+header button{
+
 }
 
 header h2{
@@ -106,7 +141,7 @@ header .div {
 nav {
   display: flex;
   justify-content: center;
-}
+} */
 
 main {
   background-color: #fff9eb;
