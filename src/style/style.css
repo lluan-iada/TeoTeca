@@ -129,56 +129,66 @@ header nav li {
 
 /* Fim da estilização do Header*/
 
-body>main {
-  border: 2px solid rgb(255, 60, 0);
+main > div{
+  flex: 1;
+}
+
+body> main {
   display: flex;
   justify-content: space-between;
   background-color: var(--cor04);
+  height: 80vh;
 }
 
 .main-titulo {
   display: flex;
-  align-items: center;
-  border: 2px solid rgb(255, 19, 19);
-}
-
-.main-titulo span {
-  display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  gap: 10px;
 }
 
-.main-titulo > span h2 {
+
+.main-titulo > h2 {
   display: flex;
-  border: 2px solid red;
   font-size: 15px;
   font-weight: 100;
   color: var(--cor02);
 }
 
-.main-titulo > span p {
-  border: 2px solid rgb(225, 117, 214);
+.main-titulo > p {
   font-size: 15px;
   color: #190d00;
 
 }
 
-.main-img>img {
-  border: 2px solid rgb(43, 255, 0);
-  width: 550px;
-  height: 350px;
-}
-
-.main-img>.shadowbox {
-  border: 2px solid rgb(255, 17, 227);;
-  background-color: var(--cor03);
-  transform: rotate(5deg);
-  border-radius: 8px;
+.main-img{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
+.main-img img {
+  width: 650px;
+  height: 450px;
+  border-radius: 15px;
+  z-index: 50;
+}
 
-main> .main-botao {
-  border: 2px solid rgb(107, 255, 2);
+.main-img>.shadowbox {
+  background-color: var(--cor03);
+  z-index: 40;
+  width: 650px;
+  height: 450px;
+  transform: rotate(3deg);
+  border-radius: 8px;
+  position: absolute;
+}
+
+.main-titulo > .main-botao {
   display: flex;
   height: 30px;
   gap: 10px;
@@ -222,8 +232,48 @@ main> .main-botao {
 /* Fim da estilização do Main */
 
 
+/* Inicio da estilização do sobre */
 
+#sobre h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  margin: 15px;
+}
 
+#sobre div p{
+  text-align: center;
+  font-size: 10px;
+}
+
+#div_art {
+  display: flex;
+  justify-content: center;
+  
+
+}
+
+article {
+  border: 0.7px solid #fee993;
+  border-radius: 7px;
+  padding: 1rem;
+  margin: 10px;
+
+}
+
+article img {
+  width: 35px;
+  height: 35px;
+  border-radius: 9px;
+}
+
+article h4,
+p {
+  font-size: 10px;
+}
+
+/* Fim da estilização do Sobre
 
  /* article {
   border: 1px solid red;
