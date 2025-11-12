@@ -4,12 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>TeoTeca</title>
     <link rel="icon" href="./src/img/Logo - FundoTrans.png">
     <link rel="stylesheet" href="./src/style/style.css">
 </head>
 
 <body>
+
     <header>
         <div class="header-logo">
             <a href="index.html"><img src="./src/img/Logo - FundoTrans.png" class="titulo"></a>
@@ -21,7 +26,9 @@
         <nav>
             <ul>
                 <li class="listagem">
-                    <a href="#inicio">Início</a>
+                    <a href="#inicio"><span class="material-symbols-outlined">
+                            home
+                        </span>Início</a>
                 </li>
                 <li>
                     <a href="#sobre">Sobre</a>
@@ -42,15 +49,17 @@
 
     <main id="inicio">
         <div class="main-titulo">
-                <h2>A História da Igreja ao seu Alcance</h2>
-                <p>
-                    Mergulhe em séculos de sabedoria cristã. Do Didaqué aos pais da igreja,
-                    da Reforma Protestante à teologia contemporânea.
-                </p>
-             <div class="main-botao">
-            <button>Começar Agora</button>
-            <button>Saiba Mais</button>
-        </div>
+            <h2>A História da Igreja ao seu Alcance</h2>
+            <p>
+                Mergulhe em séculos de sabedoria cristã. Do Didaqué aos pais da igreja,
+                da Reforma <br>Protestante à teologia contemporânea.
+            </p>
+            <div class="main-botao">
+                <button>
+                    Começar Agora
+                    <i class="fa-solid fa-arrow-right"></i></button>
+                <button>Saiba Mais</button>
+            </div>
         </div>
         <div class="main-img">
             <img src="./src/img/Imagem-Inicio.jpeg">
@@ -78,24 +87,24 @@
     </section>
 
     <section id="sobre">
-        <div>
+        <div class="sobre-titulo">
             <h2>Sobre a Biblioteca Teológica</h2>
             <p>
                 Nossa missão é preservar e tornar acessível a rica tradição teológica cristã,
-                desde os primeiros escritos apostólicos até as discussões contemporâneas.
+                desde os primeiros <br>escritos apostólicos até as discussões contemporâneas.
             </p>
         </div>
         <div id="div_art">
             <article>
                 <img src="./src/img/Icon 1 - Recursos.png">
                 <h4>Coleção Completa</h4>
-                <p>Acesso a documentos fundamentais organizados cronologicamente,
+                <p>Acesso a documentos fundamentais organizados cronologicamente, <br>
                     desde o século I até os dias atuais.</p>
             </article>
             <article>
                 <img src="./src/img/Icon 2 - sobre.png">
                 <h4>Aprendizado Interativo</h4>
-                <p>Quiz e recursos educacionais para aprofundar seu conhecimento
+                <p>Quiz e recursos educacionais para aprofundar seu conhecimento <br>
                     sobre história da igreja e teologia.</p>
             </article>
         </div>
@@ -205,15 +214,15 @@
             <div>
                 <h4>Contato</h4>
                 <p>
-                    <img src="" alt="">
+                    <span class="material-symbols-outlined">mail</span>
                     <span>contato@bibliotecateologica.com</span>
                 </p>
                 <p>
-                    <img src="" alt="">
+                    <span class="material-symbols-outlined">add_call</span>
                     <span>+55 (11) 1234-5678</span>
                 </p>
                 <p>
-                    <img src="" alt="">
+                    <span class="material-symbols-outlined">location_on</span>
                     <span>São Paulo, SP</span>
                 </p>
 
