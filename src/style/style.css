@@ -82,6 +82,9 @@ header nav li {
   list-style: none;
 
   & a {
+    display: flex;
+    align-items: center;
+    gap: 3px;
     text-decoration: none;
     padding: 5px 6px;
     border-radius: 5px;
@@ -90,6 +93,10 @@ header nav li {
 
   & a:hover {
     background-color: rgba(0, 0, 0, 0.101);
+  }
+
+  & span {
+    color: #E17100;
   }
 }
 
@@ -196,6 +203,7 @@ body>main {
   & button {
     padding: 5px 10px;
     border-radius: 5px;
+    gap: 2px;
   }
 
   & button:nth-child(1) {
@@ -277,8 +285,9 @@ body>main {
     font-size: 1rem;
     font-weight: 50;
     text-align: center;
-    color: rgb(84, 33, 1);
+    color: rgb(43, 6, 1);
   }
+
   & p {
     text-align: center;
     font-size: 15px;
@@ -301,7 +310,7 @@ article {
   gap: 15px;
   width: 50%;
   max-width: 470px;
-  
+
 
 }
 
@@ -330,62 +339,53 @@ main > div > div{
   border: 1px solid red;
 } */
 
-/* img {
-  width: 35px;
-  height: 35px;
-  border-radius: 9px;
-} */
 
-
-/*main {
-  background-color: #fff9eb;
-  display: flex;
-}
-
-main img {
-  width: 400px;
-  height: 305px;
-  position: absolute;
-  transform: translate(-0%, -100%);
-}
-
-main .shadowbox {
-  background-color: #fee993;
-  width: 400px;
-  height: 305px;
-  transform: rotate(5deg);
-  border-radius: 8px;
-  position: relative;
-}
-
-
-section #sobre {
-  max-width:fit-content;
-  padding: 2rem;
+footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-}
-.infos {
-  background-color: #e17100;
-
-}
-
-#recursos{
-  background-color: #fff9eb;
-}
-
-.preFooter{
-  background-color: #e17100;
-}
-
-footer{
+  justify-content: center;
+  color: white;
+  padding: 25px;
+  gap: 15px;
   background-color: #1c1917;
+
+  & hr {
+    border-color: rgba(255, 255, 255, 0.242);
+    width: 100%;
+  }
+
+  & a {
+    text-decoration: none;
+    color: white;
+    ;
+  }
+
+  & p {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
 }
 
-#sobre > div {
+footer .footerPai {
+  display: flex;
+
+}
+
+footer .footerPai div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 50px;
+  gap: 5px;
+}
+
+footer .material-symbols-outlined {
+  color: var(--cor02);
+}
+
+#sobre>div {
   border: 2px solid red;
 
-} 
-*/
+}
