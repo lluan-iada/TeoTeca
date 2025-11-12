@@ -136,6 +136,8 @@ header nav li {
 
 /* Fim da estilização do Header*/
 
+/* Incio da estilização do Main*/
+
 main>div {
   flex: 1;
 }
@@ -339,6 +341,46 @@ main > div > div{
   border: 1px solid red;
 } */
 
+/* Incio da estilização da chamada*/
+
+.chamada {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--cor01);
+  border: 2px solid red;
+}
+
+.chamada-titulo {
+  gap: 40px;
+
+}
+
+.chamada-titulo>h3 {
+  border: 2px solid rgb(25, 0, 255);
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.chamada-titulo>p {
+  font-size: 15px;
+  display: flex;
+  text-align: center;
+  /* justify-content: center; */
+  border: 2px solid rgb(255, 213, 0);
+}
+
+.chamada-botao {
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+
+/* Incio da estilização do Footer*/
 
 footer {
   display: flex;
