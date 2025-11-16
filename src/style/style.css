@@ -302,7 +302,7 @@ body>main {
 
 }
 
-article {
+#div_art>article {
   display: flex;
   flex-direction: column;
   border: 0.7px solid #fee993;
@@ -313,18 +313,15 @@ article {
   width: 50%;
   max-width: 470px;
 
+  & img {
+    width: 45px;
+    height: 45px;
+    border-radius: 9px;
+  }
 
-}
-
-article img {
-  width: 45px;
-  height: 45px;
-  border-radius: 9px;
-}
-
-article h4,
-p {
-  font-size: 15px;
+  & h4, p {
+    font-size: 15px;
+  }
 }
 
 /* Fim da estilização do Sobre */
