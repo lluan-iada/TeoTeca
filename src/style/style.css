@@ -334,17 +334,26 @@ p {
 #recursos {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem;
   background-color: var(--cor04);
-  border: 2px solid red;
-  display: flex;
-  padding: 20px;
+  /* border: 2px solid red; */
 
 }
 
-#recursos>div {
+#recursos>div:first-child {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  /* border: 2px solid red; */
+}
 
+#recursos>div:last-child {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .box {
@@ -353,10 +362,10 @@ p {
   border: 0.5px solid #fee993;
   border-radius: 7px;
   padding: 1rem;
-  margin: 10px;
-  gap: 12px;
-  width: 50%;
-  max-width: 400px;
+  margin: 20px;
+  gap: 10px;
+  max-width: 250px;
+  flex: 1;
   background-color: white;
 
   & img {
@@ -369,19 +378,18 @@ p {
   }
 }
 
-
-
 .box2 {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   border: 1px solid #fee993;
   justify-content: center;
-  border-radius: 7px;
-  padding: 4rem;
-  margin: 10px;
-  gap: 12px;
-  width: 50%;
-  max-width: 2000px;
+  border-radius: 12px;
+  padding: 3rem 4rem;
+  margin: 0 auto;
+  gap: 1rem;
+  width: 100%;
+  max-width: 900px;
   background-color: white;
 
   & h4 {
@@ -393,13 +401,30 @@ p {
   }
 }
 
-.box2 > span {
-  border: 2px solid red;
+.box2 .box2-recursos {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem 4rem;
+
+  & p {
+    display: flex;
+    align-items: center;
+    flex: 1 1 calc(50% - 4rem);
+    gap: 10px;
+  }
+
+  & .material-symbols-outlined {
+    font-size: 20px;
+    line-height: 1;
+    color: green;
+    margin-top: 2px;
+  }
 
 }
+
+/* Fim da estilização dos recursos */
+
+/* Incicio da estilização dos blogs */
 
 
 
