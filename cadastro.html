@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeoTeca</title>
+    <link rel="icon" href="./src/img/Logo - FundoTrans.png">
+    <!-- <link rel="stylesheet" href="./src/style/style.css"> -->
+</head>
+
+<body>
+    <h2>TeoTeca</h2>
+    <h3>Explore a história e os fundamentos da fé cristã</h3>
+
+    <section>
+        <div>
+            <button onclick="login.style.display='block'; cadastro.style.display='none'">Login</button>
+            <button onclick="login.style.display='none'; cadastro.style.display='block'">Cadastro</button>
+        </div>
+
+        <div id="login">
+            <h4>Bem-vindo</h4>
+            <p>Acesse sua conta ou crie uma nova para começar.</p>
+            <button onclick="login()">Login</button>
+        </div>
+
+        <div id="cadastro">
+            <h4>Crie sua conta</h4>
+            <p>Preencha os dados para se cadastrar.</p>
+            <button onclick="cadastro()">Cadastro</button>
+        </div>
+    </section>
+</body>
+
+</html>
