@@ -104,12 +104,16 @@ header nav li {
   display: flex;
   gap: 10px;
 
-  & button {
+  & a {
+    display: flex;
     padding: 5px 10px;
     border-radius: 5px;
+    text-decoration: none;
   }
 
-  & button:nth-child(1) {
+  & a:nth-child(1) {
+    align-items: center;
+    color: var(--cor00);
     font-size: 12px;
     font-weight: 500;
     border: 1px solid var(--cor03);
@@ -118,17 +122,17 @@ header nav li {
 
   }
 
-  & button:nth-child(1):hover {
+  & a:nth-child(1):hover {
     background-color: rgba(255, 255, 0, 0.174);
   }
 
-  & button:nth-child(2) {
+  & a:nth-child(2) {
     border: 2px solid var(--cor02);
     background-color: var(--cor02);
     color: white;
   }
 
-  & button:nth-child(2):hover {
+  & a:nth-child(2):hover {
     background-color: #c0660c;
     border-color: #c0660c;
   }
@@ -319,7 +323,8 @@ body>main {
     border-radius: 9px;
   }
 
-  & h4, p {
+  & h4,
+  p {
     font-size: 15px;
   }
 }
@@ -371,7 +376,7 @@ body>main {
   }
 
   & h4 {
-    color: red;
+    color: var(--cor00);
   }
 }
 
@@ -423,7 +428,55 @@ body>main {
 
 /* Incicio da estilização dos blogs */
 
+#blog {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem;
+}
 
+.blog-titulo {
+  /* border: 2px solid red; */
+  flex: 0 0 100%;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.blog-article {
+  display: flex;
+  justify-content: center;
+
+  & article {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid #fee993;
+    border-radius: 18px;
+    overflow: hidden;
+    flex: 1 1 220px;
+    max-width: 360px;
+  }
+}
+
+
+.blog-botao {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+
+  & button {
+    border: 2px solid var(--cor02);
+    gap: 5px;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 100;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+}
 
 
 /* Incio da estilização da chamada*/
@@ -443,7 +496,6 @@ body>main {
 }
 
 .chamada-titulo>h3 {
-  border: 2px solid rgb(25, 0, 255);
   font-size: 15px;
   display: flex;
   justify-content: center;
@@ -453,8 +505,6 @@ body>main {
   font-size: 15px;
   display: flex;
   text-align: center;
-  /* justify-content: center; */
-  border: 2px solid rgb(255, 213, 0);
 }
 
 .chamada-botao {
