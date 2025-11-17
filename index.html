@@ -48,10 +48,12 @@
             </ul>
         </nav>
         <div class="header-botao">
-            <button>Entrar</button>
-            <button>Cadastre-se</button>
+            <a href="cadastro.html">Entrar</a>
+            <a href="cadastro.html">Cadastra-se</a>
         </div>
     </header>
+
+    
 
     <main id="inicio">
         <div class="main-titulo">
@@ -177,30 +179,29 @@
     </section>
 
     <section id="blog">
-        <div>
+        <div class="blog-titulo">
             <h3>Artigos Recentes</h3>
             <p>Insigts e análises profundas sobre teologia e história da igreja</p>
         </div>
-        <article>
-            <img src="">
-            <h4>Titulo Blog</h4>
-            <p>Descrição Blog</p>
-        </article>
-        <article>
-            <img src="">
-            <h4>Titulo Blog</h4>
-            <p>Descrição Blog</p>
-        </article>
-        <article>
-            <img src="">
-            <h4>Titulo Blog</h4>
-            <p>Descrição Blog</p>
-        </article>
-        <div>
-            <button>Ver todos os artigos</button>
+        <div class="blog-article">
+            <article onclick="ShowBlog('post1')">
+                <img src="">
+                <h4>Titulo Blog</h4>
+                <p>Descrição Blog</p>
+            </article>
+            <article onclick="ShowBlog('post2')">
+                <img src="">
+                <h4>Titulo Blog</h4>
+                <p>Descrição Blog</p>   
+            </article>
+            <article>
+                <img src="">
+                <h4>Titulo Blog</h4>
+                <p>Descrição Blog</p>
+            </article>
         </div>
-        <div>
-
+        <div class="blog-botao">
+            <button>Ver todos os artigos<i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </section>
 
@@ -225,7 +226,7 @@
         <div class="footerPai">
             <div>
                 <p>
-                    <img src="./img/Logo - FundoTrans.png">
+                    <img src="./src/img/Logo - FundoTrans.png">
                     <span>TeoTeca</span>
                 </p>
                 <p>
@@ -268,6 +269,43 @@
         </p>
     </footer>
 
+   
+        <section id="post1" class="blog-page">
+            <h2>Rafael, o melhor front-end do meu bairro</h2>
+            <img src="" alt="">
+            <button>
+
+            </button>
+        </section>
+        <section id="post2" class="blog-page">
+            <h1>
+                Homem-Aranha 2 é o melhor filme de super
+            </h1>
+
+        </section>
+
 </body>
 
 </html>
+
+<script>
+    var body = document.getElementsByTagName('body')[0]
+
+    function blogIndex(){
+        var blog = document.getElementById("post1") 
+         blog.style.display = "flex"
+    }
+
+
+    var ShowBlog = (blogIndex) => {
+        var blog = document.getElementById(blogIndex)
+        body.style.overflow = 'hidden'
+        blog.style.display = "flex"
+        
+    }
+
+
+
+
+
+</script>
