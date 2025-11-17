@@ -142,15 +142,16 @@ header nav li {
 
 /* Incio da estilização do Main*/
 
-main>div {
-  flex: 1;
-}
-
-body>main {
+#inicio {
   display: flex;
   justify-content: space-between;
   background-color: var(--cor04);
   height: 80vh;
+}
+
+
+#inicio>div {
+  flex: 1;
 }
 
 .main-titulo {
@@ -559,4 +560,30 @@ footer .footerPai div {
 
 footer .material-symbols-outlined {
   color: var(--cor02);
+}
+
+.blog-page {
+  flex-direction: column;
+  display: none;
+  /* width: 100vw;
+  height: 100vh; */
+  padding: 5px;
+  background-color: aqua;
+
+  & h2{
+
+  }
+
+
+  & p {
+
+  }
+
+  & img{
+
+  }
+}
+
+#post1 {
+  
 }
