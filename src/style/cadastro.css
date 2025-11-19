@@ -1,0 +1,179 @@
+:root {
+    --cor00: #1C1917;
+    --cor01: #E66900;
+    --cor02: #E17100;
+    --cor03: #FEE993;
+    --cor04: #FFF9EB;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--cor04);
+}
+
+/* Container geral do cadastro/login */
+
+.container-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    padding: 15px;
+    gap: 15px;
+}
+
+/* Inicio do Cabeçalho */
+.header-login {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 15px;
+
+    & img {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 0;
+    }
+
+    & h3{
+        /* border: 2px solid red; */
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+
+    & h2 {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+        color: var(--cor02)
+    }
+}
+
+/* Fim do Cabeçalho */
+
+/*Inicio do Titulo do Formulário */
+
+.section-login {
+    background-color: white;
+    width: 100%;
+    padding: 2rem;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.17);
+}
+
+.titulo-card {
+     /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--cor01);
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.subtitulo-card {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+
+/* Estilização dos botões moveis */
+.section-botao {
+     /* border: 2px solid red; */
+    background-color: #f0f0f0;
+    padding: 3px;
+    border-radius: 50px;
+    display: flex;
+    margin-bottom: 20px;
+
+    & .botao {
+        flex: 1;
+        padding: 8px;
+        border: none;
+        border-radius: 50px;
+        background: transparent;
+        color: #666;
+        font-weight: 600;
+        font-size: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    & .ativo {
+        background-color: white;
+        color: var(--cor01);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+}
+
+/* Inicio da Estilização dos Inputs*/
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    & span {
+        font-size: 12px;
+        font-weight: 600;
+        color: #444;
+        margin-left: 2px;
+    }
+
+}
+
+input {
+     /* border: 2px solid red; */
+    background-color: #f8f9fa;
+    border: 1px solid #eee;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #3f3f3f83;
+    width: 100%;
+    transition: 0.2s;
+}
+
+input:focus {
+    background-color: white;
+    border-color: var(--cor03);
+    box-shadow: 0 0 0 3px rgba(254, 233, 147, 0.3);
+}
+
+/* Botão de Entrada */
+
+.botao-entrar {
+    background-color: var(--cor01);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 100%;
+    transition: 0.2s;
+    box-shadow: 0 4px 10px rgba(230, 105, 0, 0.2);
+}
+
+.btn-entrar:hover {
+    background-color: var(--cor02);
+    transform: translateY(-1px);
+}
