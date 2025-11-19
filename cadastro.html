@@ -4,33 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeoTeca</title>
-    <link rel="icon" href="./src/img/Logo - FundoTrans.png">
-    <!-- <link rel="stylesheet" href="./src/style/style.css"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>TeoTeca - Acesso</title>
+    
+    <link rel="stylesheet" href="./src/style/cadastro.css">
+    
 </head>
-
 <body>
-    <h2>TeoTeca</h2>
-    <h3>Explore a história e os fundamentos da fé cristã</h3>
 
-    <section>
-        <div>
-            <button onclick="login.style.display='block'; cadastro.style.display='none'">Login</button>
-            <button onclick="login.style.display='none'; cadastro.style.display='block'">Cadastro</button>
+    <div class="container-login">
+        
+        <div class="header-login">
+            <a href="index.html"><img src="./src/img/Logo - FundoTrans.png" alt="Logo TeoTeca"></a> 
+            
+            <h2>Biblioteca Teológica</h2>
+            <h3>Explore a história e os fundamentos da fé cristã</h3>
         </div>
 
-        <div id="login">
-            <h4>Bem-vindo</h4>
-            <p>Acesse sua conta ou crie uma nova para começar.</p>
-            <button onclick="login()">Login</button>
-        </div>
+        <section class="section-login">
+            <div class="titulo-card">
+                <span class="material-symbols-outlined">menu_book</span>
+                <span>Bem-vindo</span>
+            </div>
+            <p class="subtitulo-card">Acesse sua conta ou crie uma nova para começar</p>
 
-        <div id="cadastro">
-            <h4>Crie sua conta</h4>
-            <p>Preencha os dados para se cadastrar.</p>
-            <button onclick="cadastro()">Cadastro</button>
-        </div>
-    </section>
+            <div class="section-botao">
+                <button id="botao-login" class="botao ativo" onclick="alternarAba('login')">Login</button>
+                <button id="botao-cadastro" class="botao" onclick="alternarAba('cadastro')">Cadastro</button>
+            </div>
+
+           <div id="form-login" class="formulario">
+                <div class="campo">
+                    <span>Email</span>
+                    <input type="email" id="email_login" placeholder="seu@email.com">
+                </div>
+
+                <div class="campo">
+                    <span>Senha</span>
+                    <input type="password" id="senha" placeholder="********">
+                </div>
+
+                <button class="botao-entrar" onclick="entrar()">Entrar</button>
+            </div>
+
+            <div id="form-cadastro" class="formulario" style="display: none;">
+                <div class="campo">
+                    <span>Nome</span>
+                    <input type="text" id="nome-cad" placeholder="Seu nome completo">
+                </div>
+
+                <div class="campo">
+                    <span>Email</span>
+                    <input type="email" id="email-cad" placeholder="seu@email.com">
+                </div>
+
+                <div class="campo">
+                    <span>Senha</span>
+                    <input type="password" id="senha-cad" placeholder="********">
+                </div>
+
+                <button class="botao-entrar" onclick="cadastrar()">Criar Conta</button>
+                
+                <div id="div_aguardar" style="display: none; justify-content: center; margin-top: 10px;">
+                   <p style="font-size: 12px; color: #666;">Carregando...</p>
+                </div>
+            </div>
+
 </body>
-
 </html>
+
+<script>
+    function alternarAba(aba) {
+        var formLogin = document.getElementById('form-login');
+        var formCadastro = document.getElementById('form-cadastro');
+        var botaoLogin = document.getElementById('botao-login');
+        var botaoCadastro = document.getElementById('botao-cadastro');
+
+        if (aba === 'login') {
+            formLogin.style.display = 'flex';
+            formCadastro.style.display = 'none';
+            botaoLogin.classList.add('ativo');
+            botaoCadastro.classList.remove('ativo');
+        } else {
+            formLogin.style.display = 'none';
+            formCadastro.style.display = 'flex';
+            botaoCadastro.classList.add('ativo');
+            botaoLogin.classList.remove('ativo');
+        }
+    }
+</script>
