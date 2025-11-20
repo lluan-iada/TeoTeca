@@ -70,7 +70,7 @@ body {
 }
 
 .titulo-card {
-     /* border: 2px solid red; */
+    /* border: 2px solid red; */
     display: flex;
     align-items: center;
     gap: 6px;
@@ -89,7 +89,7 @@ body {
 
 /* Estilização dos botões moveis */
 .section-botao {
-     /* border: 2px solid red; */
+    /* border: 2px solid red; */
     background-color: #f0f0f0;
     padding: 3px;
     border-radius: 50px;
@@ -139,7 +139,7 @@ body {
 }
 
 input {
-     /* border: 2px solid red; */
+    /* border: 2px solid red; */
     background-color: #f8f9fa;
     border: 1px solid #eee;
     padding: 10px 12px;
