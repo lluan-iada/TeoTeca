@@ -19,7 +19,7 @@ function buscarPerguntas(idFormulario) {
 function quiz(id_Usuario, id_Formulario, pontuacao) {
 
     var instrucao = `
-        INSERT INTO usuario_has_formulario (fk_Usuario, fk_Formulario, pontuacao, data_realizacao) 
+        INSERT INTO usuario_formulario (fk_Usuario, fk_Formulario, pontuacao, data_realizacao) 
         VALUES ('${id_Usuario}', '${id_Formulario}', '${pontuacao}', NOW())
     `
 
