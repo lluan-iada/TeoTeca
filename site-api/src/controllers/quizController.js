@@ -1,14 +1,14 @@
 var quizModel = require("../models/quizModels");
 
-function quiz(req, res){
+function quiz(req, res) {
     var id_Usuario = req.body.id_Usuario;
     var id_Formulario = req.body.id_Formulario;
-    var pontucao = req.body.pontuacao;
+    var pontuacao = req.body.pontuacao;
 
-    if (id_Usuario == undefined || id_Formulario == undefined || pontucao == undefined){
-         res.status(400).send("Faltam dados para salvar o resultado.");
+    if (id_Usuario == undefined || id_Formulario == undefined || pontuacao == undefined) {
+        res.status(400).send("Faltam dados para salvar o resultado.");
     } else {
-        quizModel.quiz(idUsuario, idQuiz, pontuacao)
+        quizModel.quiz(id_Usuario, id_Formulario, pontuacao)
             .then(function (resultado) {
                 res.status(200).json({
                     mensagem: "Resultado salvo com sucesso!",
@@ -22,8 +22,6 @@ function quiz(req, res){
     }
 }
 
-
 module.exports = {
     quiz
 };
-
