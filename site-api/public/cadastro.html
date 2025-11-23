@@ -166,9 +166,12 @@
                     console.log(json);
                     console.log(JSON.stringify(json));
 
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id_Usuario; 
+                    var usuario = json[0] || json;
+
+                    sessionStorage.EMAIL_USUARIO = usuario.email;
+                    sessionStorage.NOME_USUARIO = usuario.nome;
+                    sessionStorage.ID_USUARIO = usuario.id_Usuario; 
+                    
                     setTimeout(function () {
                         window.location = "../dashboard/dashboard.html";
                     }, 1000);
