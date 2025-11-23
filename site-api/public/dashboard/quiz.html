@@ -77,11 +77,11 @@
             <div id="botoes">
                 <button onclick="submeter()" id="btnSubmeter">Confirmar</button>
                 <button onclick="avancar()" id="btnProx" disabled>Próxima</button>
-                <button onclick="location.reload()" id="btnTentarNovamente" style="display: none;">Tentar
-                    Novamente</button>
             </div>
-
         </div>
+        <button onclick="location.reload()" id="btnTentarNovamente" style="display: none;">Tentar
+                    Novamente</button>
+
     </main>
 
 </body>
@@ -208,7 +208,7 @@
         var msg = pontuacaoFinal > 3 ? "Parabéns!" : "Estude mais!"
         document.getElementById("msgFinal").innerHTML = msg
 
-        document.getElementById("btnTentarNovamente").style.display = "block"
+        document.getElementById("btnTentarNovamente").style.display = "flex"
 
         fetch("/quiz/quiz", {
             method: "POST",
