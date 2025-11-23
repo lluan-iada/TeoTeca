@@ -123,19 +123,19 @@
                 senhaServer: senhaVar
             }),
         })
-        .then(function (resposta) {
-            if (resposta.ok) {
-                alert("Cadastro realizado com sucesso! Faça login.");
-                setTimeout(() => {
-                    alternarAba('login');
-                }, 1000);
-            } else {
-                throw "Houve um erro ao tentar realizar o cadastro!";
-            }
-        })
-        .catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-        });
+            .then(function (resposta) {
+                if (resposta.ok) {
+                    alert("Cadastro realizado com sucesso! Faça login.");
+                    setTimeout(() => {
+                        alternarAba('login');
+                    }, 1000);
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
 
         return false;
     }
@@ -170,8 +170,8 @@
 
                     sessionStorage.EMAIL_USUARIO = usuario.email;
                     sessionStorage.NOME_USUARIO = usuario.nome;
-                    sessionStorage.ID_USUARIO = usuario.id_Usuario; 
-                    
+                    sessionStorage.ID_USUARIO = usuario.id_Usuario;
+
                     setTimeout(function () {
                         window.location = "../dashboard/dashboard.html";
                     }, 1000);

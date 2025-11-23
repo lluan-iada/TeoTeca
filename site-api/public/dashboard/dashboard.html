@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <link rel="icon" href="../assets/img/Logo - FundoTrans.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeoTeca | Área do Aluno</title>
-
+    <title>TeoTeca | Quiz</title>
     <link rel="stylesheet" href="../css/dashboards.css">
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body onload="validarSessao(), atualizarGrafico()">
+<body onload="validarSessao()">
 
     <header>
         <div class="header-logo">
-            <a href="../index.html"><img src="../assets/img/Logo - FundoTrans.png" class="titulo" alt="Logo"></a>
+            <img src="../assets/img/Logo - FundoTrans.png" class="titulo" alt="Logo">
             <span>
                 <h2>TeoTeca</h2>
                 <h3>Conhecimento que edifica</h3>
@@ -27,54 +24,45 @@
         <nav>
             <ul>
                 <li>
-                    <a href="./dashboard.html">
-                        <span class="material-symbols-outlined">dashboard</span>Dashboard
-                    </a>
-                <li>
-                    <a href="./quiz.html">
-                        <span class="material-symbols-outlined">neurology</span>Quiz
-                    </a>
+                    <a href="../dashboard/dashboard.html"><span
+                            class="material-symbols-outlined">dashboard</span>Dashboard</a>
                 </li>
                 <li>
-                    <a href="../index.html#blog">
-                        <span class="material-symbols-outlined">stylus_note</span>Blog
-                    </a>
+                    <a href="./quiz.html"><span class="material-symbols-outlined">neurology</span>Quiz</a>
+                </li>
+                <li>
+                    <a href="./blog.html"><span class="material-symbols-outlined">stylus_note</span>Blog</a>
                 </li>
             </ul>
         </nav>
-
-        <div class="header-botao">
-            <span id="b_usuario"></span>
-            <a href="#" onclick="limparSessao()">Sair</a>
+        <div class="header-usuario">
+            <span id="b_usuario">...</span>
+            <button onclick="limparSessao()"><span class="material-symbols-outlined">exit_to_app</span>Sair</button>
         </div>
     </header>
 
-    <main class="dashboard-content">
 
-        <div class="card-kpi">
+    <main class="conteudo-dash">
+        <article>
             <h3>Última Pontuação</h3>
             <p id="kpiUltimaNota">-</p>
-        </div>
-        <div class="card-kpi">
+        </article>
+        <article>
             <h3>Total de Tentativas</h3>
             <p id="kpiTentativas">0</p>
-        </div>
-        <div class="card-kpi">
+        </article>
+        <article>
             <h3>Média Geral</h3>
             <p id="kpiMedia">-</p>
-        </div>
-        <div class="card-kpi">
+        </article>
+        <article>
             <h3>Melhor Nota</h3>
             <p id="kpiMelhorNota">-</p>
-        </div>
-
-        </div>
-
-        <div class="graph-box">
-            <canvas id="myChart"></canvas>
-        </div>
-
+        </article>
     </main>
+    <section class="areaGrafico">
+        <canvas id="myChart"></canvas>
+    </section>
 
 </body>
 
@@ -82,37 +70,28 @@
 
 <script>
     function validarSessao() {
-        var email = sessionStorage.EMAIL_USUARIO;
-        var nome = sessionStorage.NOME_USUARIO;
-
-        if (email != null && nome != null) {
-            document.getElementById("b_usuario").innerHTML = nome;
-        } else {
-            window.location = "../login.html";
-        }
+        var nome = sessionStorage.NOME_USUARIO
+        if (nome) document.getElementById("b_usuario").innerHTML = "Olá, " + nome
+        else window.location = "../cadastro.html"
     }
 
     function limparSessao() {
         sessionStorage.clear();
-        window.location = "../login.html";
+        window.location = "../index.html";
     }
-
 
     function atualizarGrafico() {
         var idUsuario = sessionStorage.ID_USUARIO;
-
 
         fetch(`/quiz/listar/${idUsuario}`, { cache: 'no-store' })
             .then(function (response) {
                 if (response.ok) {
                     response.json().then(function (resposta) {
                         console.log("Dados recebidos do banco:", resposta);
-
-
                         plotarGrafico(resposta);
                     });
                 } else {
-                    console.error('Nenhum dado encontrado ou erro na API');
+                    console.error(`Nenhum dado encontrado ou erro na API`);
                 }
             })
             .catch(function (error) {
@@ -120,34 +99,22 @@
             });
     }
 
-
     function plotarGrafico(resposta) {
 
-
         if (resposta.length > 0) {
-
             document.getElementById("kpiUltimaNota").innerHTML = resposta[0].pontuacao;
             document.getElementById("kpiTentativas").innerHTML = resposta.length;
         }
 
-
         var labels = [];
         var dados = [];
-
 
         for (var i = 0; i < resposta.length && i < 5; i++) {
             var registro = resposta[i];
 
-
-            labels.push ("Tentativa " + (resposta.length - i));
-
-
+            labels.push("Tentativa " + (i + 1));
             dados.push(registro.pontuacao);
         }
-
-        labels.reverse();
-        dados.reverse();
-
 
         const ctx = document.getElementById('myChart');
 
@@ -157,6 +124,7 @@
                 labels: labels,
                 datasets: [{
                     label: 'Acertos',
+                    data: dados,
                     backgroundColor: '#E66900',
                     borderColor: '#E17100',
                     borderWidth: 1
@@ -175,9 +143,7 @@
                     }
                 },
                 plugins: {
-                    legend: {
-                        display: false
-                    },
+                    legend: { display: false },
                     title: {
                         display: true,
                         text: 'Histórico de Desempenho (Últimas 5 Tentativas)',
@@ -188,4 +154,5 @@
         });
     }
 
+    atualizarGrafico();
 </script>
