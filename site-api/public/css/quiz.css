@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --cor00: #1C1917;
+    --cor01: #E66900;
+    --cor02: #E17100;
+    --cor03: #FEE993;
+    --cor04: #FFF9EB;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+}
+
+img {
+    width: 30px;
+}
+
+body>header {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 70px;
+    border-bottom: 2px solid var(--cor03);
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    /* border: 2px solid red; */
+    gap: 4px;
+}
+
+.header-logo img {
+    width: 50px;
+    height: 50px;
+    /* border: 2px solid orange; */
+}
+
+.header-logo h2 {
+    font-size: 16px;
+    color: var(--cor01);
+    font-weight: 50;
+    /* border: 2px solid yellow; */
+}
+
+.header-logo h3 {
+    font-size: 12px;
+    color: var(--cor00);
+    font-weight: 40;
+    /* border: 2px solid green; */
+}
+
+header nav {
+    /* border: 2px solid palevioletred; */
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+header nav li {
+    list-style: none;
+
+    & a {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        text-decoration: none;
+        padding: 5px 6px;
+        border-radius: 5px;
+        color: #1C1917;
+    }
+
+    & a:hover {
+        background-color: rgba(0, 0, 0, 0.101);
+    }
+
+    & span {
+        color: #E17100;
+    }
+}
+
+.header-usuario {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    & button {
+        border: 2px solid var(--cor02);
+        background-color: var(--cor02);
+        color: white;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 5px 10px;
+        border-radius: 5px;
+        gap: 5px;
+    }
+
+    & button:hover {
+        background-color: #c0660c;
+        border-color: #c0660c;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    height: 100%;
+    align-items: center;
+
+    & #div_iniciarQuiz {
+        border: 2px solid rgb(255, 60, 255);
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding: 30px;
+        background-color: #b13cff14;
+
+
+        & img {
+            width: 60px;
+            border-radius: 100px;
+        }
+
+        & #btnIniciarQuiz {
+            height: fit-content;
+            border: 3px solid #b13cffd1;
+            border-radius: 7px;
+            padding: 10px;
+            width: 100%;
+            background-color: #b13cffd1;
+            color: white;
+
+        }
+    }
+
+
+}
