@@ -1,9 +1,9 @@
-var quizModel = require("../models/quizModels")
+var quizModels = require("../models/quizModels")
 
 function buscarPerguntas(req, res) {
     var idFormulario = req.params.idFormulario
 
-    quizModel.buscarPerguntas(idFormulario)
+    quizModels.buscarPerguntas(idFormulario)
         .then(function (resultado) {
             if (resultado.length > 0) {
                 res.status(200).json(resultado)
@@ -25,7 +25,7 @@ function quiz(req, res) {
     if (id_Usuario == undefined || id_Formulario == undefined || pontuacao == undefined) {
         res.status(400).send("Faltam dados para salvar o resultado.")
     } else {
-        quizModel.quiz(id_Usuario, id_Formulario, pontuacao)
+        quizModels.quiz(id_Usuario, id_Formulario, pontuacao)
             .then(function (resultado) {
                 res.status(200).json({
                     mensagem: "Resultado salvo com sucesso!",
@@ -39,7 +39,25 @@ function quiz(req, res) {
     }
 }
 
+function listarResultados(req, res) {
+    var idUsuario = req.params.idUsuario
+
+    quizModels.listarResultados(idUsuario)
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado)
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(function (erro) {
+            console.log(erro)
+            console.log("Houve um erro ao buscar os resultados: ", erro.sqlMessage)
+            res.status(500).json(erro.sqlMessage)
+        })
+}
+
 module.exports = {
     buscarPerguntas,
-    quiz
+    quiz,
+    listarResultados
 }
