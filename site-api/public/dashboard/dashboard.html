@@ -7,6 +7,7 @@
     <title>TeoTeca | Quiz</title>
     <link rel="stylesheet" href="../css/dashboards.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="icon" href="../assets/img/Logo - FundoTrans.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
@@ -102,8 +103,22 @@
     function plotarGrafico(resposta) {
 
         if (resposta.length > 0) {
-            document.getElementById("kpiUltimaNota").innerHTML = resposta[0].pontuacao;
+
+            var soma = 0
+            var maiorNota = 0
+
+            for (var i = 0; i < resposta.length; i++) {
+            var nota = resposta[i].pontuacao
+            soma += nota
+            if (nota > maiorNota) maiorNota = nota
+        }
+
+        var media = soma / resposta.length
+
+            document.getElementById("kpiUltimaNota").innerHTML = resposta[resposta.length-1].pontuacao;
             document.getElementById("kpiTentativas").innerHTML = resposta.length;
+            document.getElementById("kpiMedia").innerHTML = media.toFixed(1)
+            document.getElementById("kpiMelhorNota").innerHTML = maiorNota
         }
 
         var labels = [];

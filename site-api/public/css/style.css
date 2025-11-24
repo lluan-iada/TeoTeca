@@ -531,7 +531,8 @@ header nav li {
 }
 
 .chamada-botao {
-  border: 1px solid white;
+  background-color: white;
+  border: 2px solid var(--cor03);
   border-radius: 6px;
   padding: 8px;
 }
