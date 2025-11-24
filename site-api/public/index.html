@@ -373,15 +373,29 @@
 <script>
     var blogPage = document.getElementById("blog-page")
     var main = document.getElementById("main-site")
-
-    var ShowBlog = (blogIndex) => {
+    
+    function ShowBlog(blogIndex){
         var blog = document.getElementById(blogIndex)
         blog.style.display = "flex"
         main.style.display = "none"
     }
-    
-    var HiddenBlog = () => {
+
+    function HiddenBlog(blogIndex){
         blogPage.style.display = "none"
         main.style.display = "flex"
     }
+
+    
+    // var ShowBlog = (blogIndex) => {
+    //     var blog = document.getElementById(blogIndex)
+    //     blog.style.display = "flex"
+    //     main.style.display = "none"
+    // }
+    
+    // var HiddenBlog = () => {
+    //     blogPage.style.display = "none"
+    //     main.style.display = "flex"
+    // }
+
+
 </script>
